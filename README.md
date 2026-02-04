@@ -11,15 +11,17 @@ This firmware drives the "Paul" Auto-Sampler, a 4-axis laboratory rotation syste
 * **Library:** `AccelStepper` by Mike McCauley
 
 ## Wiring Configuration
-This firmware uses specific pin assignments. Ensure your drivers are wired to the Arduino as follows:
+This firmware uses specific pin assignments given in the CNC shield. Ensure your shield wires the the drivers to the arduino as follows:
 
 | Function | Arduino Pin |
 | :--- | :--- |
-| **Global Enable** | Pin 12 |
-| **Motor 1 (Paul 1)** | Step: 2 / Dir: 13 |
-| **Motor 2 (Paul 2)** | Step: 3 / Dir: 4 |
-| **Motor 3 (Paul 3)** | Step: 5 / Dir: 6 |
-| **Motor 4 (Paul 4)** | Step: 7 / Dir: 8 |
+| **Global Enable** | Pin 8 |
+| **Motor X (Paul 1)** | Step: 2 / Dir: 5 |
+| **Motor Y (Paul 2)** | Step: 3 / Dir: 6 |
+| **Motor Z (Paul 3)** | Step: 4 / Dir: 7 |
+| **Motor A (Paul 4)** | Step: 12 / Dir: 13 |
+
+For motor A, I had to connect jumper wires from pins 12/13 to pins A.stp and A.dir in my shield. I guess this is the default if you want to have a 4th independent motor.
 
 ## Installation
 1.  Install the **Arduino IDE**.
